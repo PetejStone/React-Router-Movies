@@ -13,17 +13,19 @@ export default class App extends Component {
   }
 
   addToSavedList = movie => {
-    const savedList = this.state.savedList;
-    savedList.push(movie);
-    this.setState({ savedList });
+    console.log('hello')
+    //const savedList = this.state.savedList;
+    //savedList.push(movie);
+    //this.setState({ savedList });
   };
 
   render() {
     return (
       <div>
         <SavedList list={this.state.savedList} />
-        <Route exact path="/" component={MovieList}/>
-        <Route  path="/movies/:id" component={Movie} />
+        <Route exact path="/" component={MovieList} />
+      
+        <Route  path="/movies/:id" component={Movie}  />
         
       </div>
     );
