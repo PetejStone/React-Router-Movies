@@ -13,10 +13,14 @@ export default class App extends Component {
   }
 
   addToSavedList = movie => {
-    //console.log('hello')
+    //console.log(movie.title)
+    if (this.state.savedList.includes(movie)) {
+      alert(`${movie.title} is already in your list!`)
+    } else {
     const savedList = this.state.savedList;
     savedList.push(movie);
     this.setState({ savedList });
+    }
   };
 
   render() {
